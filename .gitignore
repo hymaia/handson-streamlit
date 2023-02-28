@@ -1,0 +1,6 @@
+.idea
+src/.DS_Store
+data
+
+*.pyc
+src/utils/__pycache__/*
