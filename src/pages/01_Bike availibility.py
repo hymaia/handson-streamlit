@@ -20,4 +20,3 @@ data_filtered = data[data['Capacité de la station'] >= min_capacity]
 st.subheader("La carte des stations")
 
 # TODO 6: Add map with filtered data (st.map)
-st.map(data_filtered)

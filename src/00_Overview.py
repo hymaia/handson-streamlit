@@ -19,7 +19,6 @@ data = load_data()
 # TODO 1: Add information with the number of stations in Paris using st.metric (with value and labels)
 
 open_stations_percentage = round(len(data[data["Station en fonctionnement"] == "OUI"])/len(data) * 100, 2)
-st.metric(value=f"{open_stations_percentage} %", label="Stations en fonctionnement")
 
 
 # TODO 2: Affichez les deux metriques sur le nombre de stations à Paris et en dehors,
@@ -29,17 +28,13 @@ stations_in_paris = len(data[data["Nom communes équipées"] == "Paris"])
 stations_not_in_paris = len(data[data["Nom communes équipées"] != "Paris"])
 
 paris, outside_paris = st.columns(2)
-paris.metric(value=stations_in_paris, label="Nombre de stations à Paris")
-outside_paris.metric(value=stations_not_in_paris, label="Nombre de stations en dehors de Paris")
 
 
 # TODO 2: Add bar with number of stations in different cities using st.bar_chart
-st.subheader("Nombre de stations en dehors de Paris")
 nb_stations_by_commune = data[
     data["Nom communes équipées"] != "Paris"].groupby("Nom communes équipées")[
     'Identifiant station'].count()
 
-st.bar_chart(nb_stations_by_commune)
 
 # TODO 4: Add headers and subheaders
 
