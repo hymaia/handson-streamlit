@@ -1,7 +1,7 @@
 import streamlit as st
 
 from src.utils.load_data import load_data
-from utils.config import LAYOUT, INITIAL_SIDEBAR_STATE
+from src.utils.config import LAYOUT, INITIAL_SIDEBAR_STATE
 
 st.set_page_config(
     page_title="Capaité",

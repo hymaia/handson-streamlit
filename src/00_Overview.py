@@ -1,7 +1,7 @@
 import streamlit as st
 
 from src.utils.load_data import load_data
-from utils.config import LOGO_PATH, LAYOUT, INITIAL_SIDEBAR_STATE, BANIERE_PATH
+from src.utils.config import LOGO_PATH, LAYOUT, INITIAL_SIDEBAR_STATE, BANIERE_PATH
 
 st.set_page_config(
     page_title="Velib",
